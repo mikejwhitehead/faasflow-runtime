@@ -40,6 +40,7 @@ func LegacyRequestHandler(response *runtime.Response, request *runtime.Request, 
 		}
 	}
 
+	request.RequestID = id
 	err := handler(response, request, ex)
 	return err
 }
